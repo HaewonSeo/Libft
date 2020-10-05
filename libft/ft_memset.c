@@ -14,26 +14,25 @@
 
 void	*ft_memset(void *dest, int c, size_t len)
 {
-	size_t		i;
-	char		*str;
+	size_t			i;
+	unsigned char	*str;
 
 	i = 0;
 	str = dest;
 	while (i < len)
-	{
-		str[i] = (unsigned char)c;
-		i++;
-	}
+		str[i++] = (unsigned char)c;
+	return (dest);
 }
 
 int		main(void)
 {
-	char *str;
+	char str[] = "aaa aaa";
 
-	str = "aaaaaaa";
-	printf("%s", str);
-	memset(str, 69, 3);
-	printf("%s", str);
+	printf("%s\n", str);
+	memset(str, '-', 3);
+	printf("%s\n", str);
+	ft_memset(str, '*', 3);
+	printf("%s\n", str);
 
 	return (0);
 }
