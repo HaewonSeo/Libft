@@ -41,3 +41,7 @@ If dest is not nul-terminated, then strlcat will consider dest to be size in len
 
 #### calloc
 + size byte 크기의 변수를 number개 저장하는 메모리 공간을 할당하고, 모든 byte를 0으로 초기화 한다.(ft_bzero()를 이용함)
+
+
+### Makefile
++ GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
