@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 20:04:09 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 16:10:21 by haseo            ###   ########.fr       */
+/*   Created: 2020/11/01 15:53:22 by haseo             #+#    #+#             */
+/*   Updated: 2020/11/01 15:56:19 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+size_t		ft_isspace(char c)
 {
-	while (*s)
-	{
-		if(*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	if(*s == (char)c)
-		return ((char *)s);
-	return (NULL);
+	return (c == ' ' || c == '\t' || c == '\v' || c == '\n' || c == '\r' || c == '\f');
 }

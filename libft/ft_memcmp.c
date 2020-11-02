@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 19:53:16 by haseo             #+#    #+#             */
-/*   Updated: 2020/10/31 20:01:46 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/02 16:08:20 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int memcmp(const void *b1, const void *b2, size_t len)
+int ft_memcmp(const void *b1, const void *b2, size_t len)
 {
 	size_t			i;
 	unsigned char	*uc_b1;

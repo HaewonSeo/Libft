@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 20:04:09 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 16:10:21 by haseo            ###   ########.fr       */
+/*   Created: 2020/11/02 11:23:20 by haseo             #+#    #+#             */
+/*   Updated: 2020/11/02 11:39:01 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+int ft_isdigit(int c)
 {
-	while (*s)
-	{
-		if(*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	if(*s == (char)c)
-		return ((char *)s);
-	return (NULL);
+	return (c >= '0' && c <='9');
 }

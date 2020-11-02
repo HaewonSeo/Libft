@@ -23,16 +23,3 @@ void	*ft_memset(void *dest, int c, size_t len)
 		str[i++] = (unsigned char)c;
 	return (dest);
 }
-
-int		main(void)
-{
-	char str[] = "aaa aaa";
-
-	printf("%s\n", str);
-	memset(str, '-', 3);
-	printf("%s\n", str);
-	ft_memset(str, '*', 3);
-	printf("%s\n", str);
-
-	return (0);
-}

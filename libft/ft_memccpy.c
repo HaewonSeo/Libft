@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 16:51:24 by haseo             #+#    #+#             */
-/*   Updated: 2020/10/05 17:12:13 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/01 15:01:55 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memccpy(void *dst, const void *src, int c, size_t len)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t len)
 {
 	size_t			i;
 	unsigned char	*char_dst;

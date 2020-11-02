@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 20:04:09 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 16:10:21 by haseo            ###   ########.fr       */
+/*   Created: 2020/11/01 14:07:29 by haseo             #+#    #+#             */
+/*   Updated: 2020/11/01 15:57:46 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char *ft_strnstr(const char *big, const char *little, size_t len)
 {
-	while (*s)
+	size_t		i;
+	size_t		j;
+
+	if (!*little)
+		return ((char *)big);
+	i = 0;
+	while (big[i] && i < len)
 	{
-		if(*s == (char)c)
-			return ((char *)s);
-		s++;
+		j = 0;
+		while (big[i + j] == little[j] && i + j < len)
+		{
+			if (!little[j + 1])
+				return ((char *)&big[i]);
+			j++;
+		}
 	}
-	if(*s == (char)c)
-		return ((char *)s);
 	return (NULL);
 }

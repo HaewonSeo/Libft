@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 20:15:03 by haseo             #+#    #+#             */
-/*   Updated: 2020/10/31 20:22:56 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/02 16:10:39 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
 	char	*begin;
 

@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 20:04:09 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 16:10:21 by haseo            ###   ########.fr       */
+/*   Created: 2020/11/01 15:39:32 by haseo             #+#    #+#             */
+/*   Updated: 2020/11/02 16:17:25 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+int ft_atoi(const char *nptr)
 {
-	while (*s)
+	int		pos;
+	int		num;
+
+	pos = 1;
+	num = 0;
+	while (ft_isspace(*nptr))
+		nptr++;
+	while (*nptr == '+' || *nptr == '-')
 	{
-		if(*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (*nptr == '-')
+			pos *= -1;
+		nptr++;
 	}
-	if(*s == (char)c)
-		return ((char *)s);
-	return (NULL);
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		num = num * 10 + *nptr - '0';
+		nptr++;
+	}
+	return (pos * num);
 }
