@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 15:39:32 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 16:17:25 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/02 19:27:24 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int ft_atoi(const char *nptr)
 	num = 0;
 	while (ft_isspace(*nptr))
 		nptr++;
-	while (*nptr == '+' || *nptr == '-')
+	if (*nptr == '+' || *nptr == '-')
 	{
 		if (*nptr == '-')
-			pos *= -1;
+			pos = -1;
 		nptr++;
 	}
 	while (*nptr >= '0' && *nptr <= '9')

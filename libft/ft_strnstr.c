@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 14:07:29 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/01 15:57:46 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/02 22:13:19 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 				return ((char *)&big[i]);
 			j++;
 		}
+		i++;
 	}
 	return (NULL);
 }

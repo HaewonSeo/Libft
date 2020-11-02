@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 15:48:48 by haseo             #+#    #+#             */
-/*   Updated: 2020/10/31 20:03:27 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/02 20:41:30 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (!dstsize)
 		return (len_src);
 	i = 0;
-	while (*src != '\0' && i < dstsize - 1)
+	while (src[i] && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;
