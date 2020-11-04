@@ -3,8 +3,8 @@
 ### Makefile
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
 
-### Test
-+ part1 test <https://github.com/ska42/libft-war-machine> (Thank you!)
+### Test **(Thanks for contributers!)**
++ part1 test <https://github.com/ska42/libft-war-machine>
 
 #### memset
 + memory의 주소에 접근 시, unsigned char 로 형변환 해주어야 한다. <https://kldp.org/node/75686>
