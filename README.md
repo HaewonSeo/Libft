@@ -3,6 +3,9 @@
 ### Makefile
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
 
+### Test
++ part1 test <https://github.com/ska42/libft-war-machine> (Thank you!)
+
 #### memset
 + memory의 주소에 접근 시, unsigned char 로 형변환 해주어야 한다. <https://kldp.org/node/75686>
 + byte 단위로 초기화한다. int형 배열을 초기화 할 때 주의해야 한다. <https://blog.naver.com/chogahui05/221484049429>, <https://minusi.tistory.com/entry/memset-%EC%82%AC%EC%9A%A9%EC%8B%9C-%EC%A3%BC%EC%9D%98%ED%95%A0-%EC%A0%90>
