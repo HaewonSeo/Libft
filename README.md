@@ -3,7 +3,7 @@
 ### Makefile
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
 
-### Test **(Thanks for contributers!)**
+### Test **(Thanks for Contributers!)**
 + part1 test <https://github.com/ska42/libft-war-machine>
 
 #### memset
