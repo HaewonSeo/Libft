@@ -5,7 +5,11 @@
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
 
 ### Test **(Thanks for Contributors!)**
-+ part1 test <https://github.com/ska42/libft-war-machine>
++ part1 & part 2 test <https://github.com/ska42/libft-war-machine>
+	+ Libftest/srcs/variables/check_compilation.sh 에서 clang -> gcc로 변경 후 실행함.
+	+ ft_memchr.c 의 test file에서 format error 있어서 수정 후 진행함.
+
+-----------------------------------------------
 
 #### ft_memset
 + memory의 주소에 접근 시, unsigned char 로 형변환 해주어야 한다. <https://kldp.org/node/75686>
@@ -86,3 +90,10 @@ If dest is not nul-terminated, then strlcat will consider dest to be size in len
 	+ FILE *stderr;
 + write()
 	return 값이 -1인 경우 상세한 오류는 errno에 저장된다.
+
+#### ft_putnbr_fd
++ Windox/Unix/Linux 자료형 크기 정리
++ long size
+	+ Windows 32bit, 64bit : 4 byte
+	+ Unix/Linux 32bit : 4 byte
+	+ Unix/Linux 64bit : 8 byte

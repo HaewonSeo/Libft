@@ -56,6 +56,5 @@ void		ft_putnbr_fd(int n, int fd);
 
 
 //Others
-//size_t		ft_isspace(char c);
 
 #endif

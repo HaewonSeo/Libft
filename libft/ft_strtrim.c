@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 19:56:46 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/20 20:23:39 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/22 00:34:12 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ char *ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1) - 1;
 	while (ft_isinset(s1[start], set))
 		start++;
-	if (start == end)
+	if (start == end + 1)
 		return (ft_strdup(""));
 	while (ft_isinset(s1[end], set))
 		end--;
 	if (end == 0)
 		return (ft_strdup(""));
-	return (ft_substr(s1, start, end - start));
+	return (ft_substr(s1, start, end - start + 1));
 }
