@@ -6,7 +6,7 @@
 #    By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/02 16:49:36 by haseo             #+#    #+#              #
-#    Updated: 2020/11/02 19:14:47 by haseo            ###   ########.fr        #
+#    Updated: 2020/11/21 23:06:11 by haseo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRCS =		ft_memset.c \
 			ft_strnstr.c \
 			ft_strncmp.c \
 			ft_atoi.c \
-			ft_isspace.c \
 			ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
@@ -37,6 +36,16 @@ SRCS =		ft_memset.c \
 			ft_tolower.c \
 			ft_calloc.c \
 			ft_strdup.c \
+			ft_substr.c \
+			ft_strjoin.c \
+			ft_strtrim.c \
+			ft_split.c \
+			ft_itoa.c \
+			ft_strmapi.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c
 
 OBJS		= ${SRCS:.c=.o}
 
