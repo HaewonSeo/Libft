@@ -1,7 +1,11 @@
-### Libft : Make a 42(Forty-Two) library
+## Libft
++ Make a 42(Forty-Two) library
 
 ### Makefile
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
+
+### Test **(Thanks for Contributors!)**
++ part1 test <https://github.com/ska42/libft-war-machine>
 
 #### ft_memset
 + memory의 주소에 접근 시, unsigned char 로 형변환 해주어야 한다. <https://kldp.org/node/75686>
