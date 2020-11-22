@@ -13,9 +13,9 @@ with your own. Take the time to expand your libft throughout the year.
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
 
 ### Test **(Thanks for Contributors!)**
-+ part1 & part 2 test <https://github.com/ska42/libft-war-machine>
++ **libft-war-machine** :  <https://github.com/ska42/libft-war-machine>
 	+ Libftest/srcs/variables/check_compilation.sh 에서 clang -> gcc로 변경 후 실행함.
-	+ ft_memchr.c 의 test file에서 format error 있어서 수정 후 진행함.
+	+ ft_memchr.c & ft_lstmap.c 의 test file에서 format error 있어서 수정 후 진행함.
 
 -----------------------------------------------
 ### Part 1 - Libc functions

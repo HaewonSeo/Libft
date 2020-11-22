@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 19:38:15 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/22 22:04:18 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/22 22:34:42 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(cur, del);
 		cur = tmp;
 	}
+	*lst = NULL;
 }
