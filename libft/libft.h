@@ -22,10 +22,10 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-/*
-** Part 1
-** Memory Functions
-*/
+
+/* Part 1 */
+/* Memory Functions*/
+
 void			*ft_memset(void *dest, int c, size_t len);
 void			ft_bzero(void *b, size_t len);
 void			*ft_memcpy(void *dst, const void *src, size_t len);
