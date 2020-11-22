@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/23 02:56:43 by haseo             #+#    #+#             */
+/*   Updated: 2020/11/23 02:56:43 by haseo            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -12,12 +24,8 @@ typedef struct		s_list
 
 /*
 ** Part 1
-*/
-
-/*
 ** Memory Functions
 */
-
 void		*ft_memset(void *dest, int c, size_t len);
 void		ft_bzero(void *b, size_t len);
 void		*ft_memcpy(void *dst, const void *src, size_t len);
@@ -29,7 +37,6 @@ int			ft_memcmp(const void *b1, const void *b2, size_t len);
 /*
 ** String Functions
 */
-
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -41,7 +48,6 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 /*
 ** Utility Functions
 */
-
 int			ft_atoi(const char *nptr);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -54,15 +60,11 @@ int			ft_tolower(int c);
 /*
 ** Use malloc()
 */
-
 void		*ft_calloc(size_t number, size_t size);
 char		*ft_strdup(const char *str);
 
 /*
 ** Part 2
-*/
-
-/*
 ** String Functions
 */
 char		*ft_substr(char const *s, unsigned int start, size_t len);
@@ -75,7 +77,6 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 /*
 ** Print Functions
 */
-
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
@@ -84,7 +85,6 @@ void		ft_putnbr_fd(int n, int fd);
 /*
 ** Bonus part
 */
-
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);

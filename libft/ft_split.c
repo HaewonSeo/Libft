@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 20:24:01 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/23 02:47:59 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:56:19 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static char		**ft_split_str(char **split_arr, char const *s, char c)
 	return (split_arr);
 }
 
-char **ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	size_t		cnt_word;
 	char		**split_arr;
