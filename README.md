@@ -16,7 +16,9 @@ with your own. Take the time to expand your libft throughout the year.
 + **libft-war-machine** :  <https://github.com/ska42/libft-war-machine>
 	+ Libftest/srcs/variables/check_compilation.sh 에서 clang -> gcc로 변경 후 실행함.
 	+ ft_memchr.c & ft_lstmap.c 의 test file에서 format error 있어서 수정 후 진행함.
-
++ **libft-unit-test**
+	+ protected/not-protected : 함수인자로 널 포인터를 주었을 경우 처리여부. undefined 이기 때문에 무시해도 된다.
+	 
 -----------------------------------------------
 ### Part 1 - Libc functions
 + In this first part, you must re-code a set of the libc functions, as defined in their

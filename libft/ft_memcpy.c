@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/05 15:15:01 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/01 15:01:38 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/22 23:57:33 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	unsigned char	*char_dst;
 	unsigned char	*char_src;
 
+	if (!dst && !src)
+		return (NULL);
 	i = 0;
 	char_dst = dst;
 	char_src = (unsigned char *)src;
