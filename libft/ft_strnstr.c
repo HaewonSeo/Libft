@@ -6,18 +6,18 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 14:07:29 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 22:13:19 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:50:55 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t		i;
 	size_t		j;
 
-	if (!*little)
+	if (!(*little))
 		return ((char *)big);
 	i = 0;
 	while (big[i] && i < len)

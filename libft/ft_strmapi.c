@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 00:54:06 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/21 01:31:13 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:49:21 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
 	unsigned int	i;

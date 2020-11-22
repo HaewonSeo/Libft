@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 01:47:52 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/23 01:19:06 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:48:04 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;

@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 01:31:26 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/21 01:32:51 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:48:16 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

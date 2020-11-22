@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 11:50:31 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 11:54:36 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:45:36 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

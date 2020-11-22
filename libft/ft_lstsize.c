@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 17:25:26 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/22 17:30:49 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:46:40 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int		count;
 	t_list	*tmp;

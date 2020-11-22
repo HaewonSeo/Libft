@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 21:38:13 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/22 00:16:18 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:45:09 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t ft_intlen(long n)
+static size_t	ft_intlen(long n)
 {
 	size_t len;
 
@@ -27,7 +27,7 @@ static size_t ft_intlen(long n)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*str;
 	size_t	len;
@@ -44,7 +44,7 @@ char *ft_itoa(int n)
 		pos = -1;
 		nbr = -nbr;
 	}
-	while(len)
+	while (len)
 	{
 		str[--len] = '0' + (nbr % 10);
 		nbr = nbr / 10;

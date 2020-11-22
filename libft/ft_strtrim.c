@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 19:56:46 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/22 00:34:12 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:51:09 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static size_t	ft_isinset(char c, char const *set)
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	size_t		start;
 	size_t		end;

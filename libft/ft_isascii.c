@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 11:40:29 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/02 11:45:53 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:40:53 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

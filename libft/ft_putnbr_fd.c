@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 21:44:42 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/22 00:09:28 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 02:48:07 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long nbr;
 

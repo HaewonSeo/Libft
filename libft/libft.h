@@ -1,12 +1,8 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
-#include <stdlib.h>
-
-// //for test
-// #include <string.h>
-// #include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 typedef struct		s_list
 {
