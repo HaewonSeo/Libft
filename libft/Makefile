@@ -6,7 +6,7 @@
 #    By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/02 16:49:36 by haseo             #+#    #+#              #
-#    Updated: 2020/11/22 22:24:35 by haseo            ###   ########.fr        #
+#    Updated: 2020/11/23 02:17:51 by haseo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,8 +45,9 @@ SRCS =		ft_memset.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
-			ft_lstnew.c \
+			ft_putnbr_fd.c
+
+B_SRCS =	ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -57,6 +58,8 @@ SRCS =		ft_memset.c \
 			ft_lstmap.c \
 
 OBJS		= ${SRCS:.c=.o}
+
+B_OBJS		= ${B_SRCS:.c=.o}
 
 INC			= ./
 
@@ -75,11 +78,14 @@ $(NAME):	${OBJS}
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${B_OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-.PHONY: 	all clean fclean re
+bonus:		${OBJS} ${B_OBJS}
+			${AR} ${ARFLAGS} ${NAME} $^
+
+.PHONY: 	all clean fclean re bonus

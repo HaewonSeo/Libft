@@ -11,14 +11,16 @@ with your own. Take the time to expand your libft throughout the year.
 
 ### Makefile
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
++ @를 붙여주면 verbose(과정을 출력)하지 않는다. <https://stackoverflow.com/questions/8610799/what-does-at-symbol-colon-mean-in-a-makefile>
 
 ### Test **(Thanks for Contributors!)**
 + **libft-war-machine** :  <https://github.com/ska42/libft-war-machine>
 	+ Libftest/srcs/variables/check_compilation.sh 에서 clang -> gcc로 변경 후 실행함.
 	+ ft_memchr.c & ft_lstmap.c 의 test file에서 format error 있어서 수정 후 진행함.
 + **libft-unit-test**
+	+ wsl환경에서는 실행되지 않아, 과카몰리에 원격으로 접속하여 실행하였다.
 	+ protected/not-protected : 함수인자로 널 포인터를 주었을 경우 처리여부. undefined 이기 때문에 무시해도 된다.
-	 
+
 -----------------------------------------------
 ### Part 1 - Libc functions
 + In this first part, you must re-code a set of the libc functions, as defined in their
