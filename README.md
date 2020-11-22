@@ -1,5 +1,13 @@
 ## Libft
 + Make a 42(Forty-Two) library
++ Introduction
+C programming can be very tedious when one doesn’t have access to those highly useful
+standard functions. This project gives you the opportunity to re-write those functions,
+understand them, and learn to use them. This library will help you for all your future C
+projects.
+Through this project, we also give you the opportunity to expand the list of functions
+with your own. Take the time to expand your libft throughout the year.
+
 
 ### Makefile
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
@@ -10,6 +18,10 @@
 	+ ft_memchr.c 의 test file에서 format error 있어서 수정 후 진행함.
 
 -----------------------------------------------
+### Part 1 - Libc functions
++ In this first part, you must re-code a set of the libc functions, as defined in their
+man. Your functions will need to present the same prototype and behaviors as the originals.
+
 
 #### ft_memset
 + memory의 주소에 접근 시, unsigned char 로 형변환 해주어야 한다. <https://kldp.org/node/75686>
@@ -67,6 +79,12 @@ If dest is not nul-terminated, then strlcat will consider dest to be size in len
 #### ft_memchr
 + void * : <https://blog.naver.com/sharonichoya/220501081810>
 
+------------------------------------
+### Part 2 - Additional functions
++ In this second part, you must code a set of functions that are either not included in the
+libc, or included in a different form. Some of these functions can be useful to write Part
+1’s functions.
+
 #### ft_strmapi.c
 + void (*p_func)(int) : 포인터 p_func의 자료형은 void (\*)(int)
 + 사용 예
@@ -74,6 +92,8 @@ If dest is not nul-terminated, then strlcat will consider dest to be size in len
 	+ p_func(15) : 허용되는 표현
 + 함수의 파라미터로 함수 포인터가 사용되었다고 해서 무조건 함수 포인터에 함수의 주소를 전달해야 하는 것은 아니다. NULL이 전달될 수 있다.
 + 함수 포인터 : <https://blog.naver.com/tipsware/221286052738>
++ 함수 포인터 변수에 함수의 주소를 대입하기 위해서는 &함수명 을 대입한다.
++ 그러나, 함수의 경우에는 함수의 이름 자체가 함수의 호출 주소가 되기 때문에 & 연산자를 사용하지 않고 함수명만 적어도 동일하게 동작한다.
 
 #### ft_putchar_fd && ft_putstr_fd
 + fd (file descripter) : <https://12bme.tistory.com/211>
@@ -97,3 +117,25 @@ If dest is not nul-terminated, then strlcat will consider dest to be size in len
 	+ Windows 32bit, 64bit : 4 byte
 	+ Unix/Linux 32bit : 4 byte
 	+ Unix/Linux 64bit : 8 byte
+----------------------------------------------
+### Bonus Part
++ Having functions to manipulate memory and strings is very useful, but you’ll soon
+discover that having functions to manipulate lists is even more useful. You’ll use the following structure to represent the elements of your list.
++ make bonus will add the bonus functions to the libft.a library
++ Here is a description of the fields of the t_list struct:
+	+ content : The data contained in the element. The void * allows to store any kind of data.
+	+ next : The next element’s address or NULL if it’s the last element.
+
+#### ft_lstmap
++ void (*f)(void *)
+	+ return : void
+	+ input : void *
++ void *(*f)(void *)
+	+ return : void *
+	+ input : void
++ 같은 함수 포인터인데, return 값이 다르다는 차이.
++ 참고 : <https://stackoverflow.com/questions/34548762/c-isnt-that-hard-void-f>
++ 함수의 자료형 해석 : <https://www.cdecl.org/>
++ input parameter로 void (*f)(void *) 받아온 경우 이 함수포인터를 사용하는 형태. 아래는 모두 함수포인터를 가르킨다.
+	+ (*f) : 원칙적인 표현
+	+ f : 허용되는 표현
