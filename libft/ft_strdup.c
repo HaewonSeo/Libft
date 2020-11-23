@@ -6,13 +6,13 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:09:14 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/23 02:48:54 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 20:12:57 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*ft_strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
 	int		i;
 	char	*dst;

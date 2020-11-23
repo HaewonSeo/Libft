@@ -13,13 +13,15 @@ with your own. Take the time to expand your libft throughout the year.
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
 + @를 붙여주면 verbose(과정을 출력)하지 않는다. <https://stackoverflow.com/questions/8610799/what-does-at-symbol-colon-mean-in-a-makefile>
 
-### Test **(Thanks for Contributors!)**
-+ **libft-war-machine** :  <https://github.com/ska42/libft-war-machine>
+### Test --- **(Thanks for Contributors!)**
++ **Libftest** :  <https://github.com/jtoty/Libftest>
 	+ Libftest/srcs/variables/check_compilation.sh 에서 clang -> gcc로 변경 후 실행함.
 	+ ft_memchr.c & ft_lstmap.c 의 test file에서 format error 있어서 수정 후 진행함.
 + **libft-unit-test**
 	+ wsl환경에서는 실행되지 않아, 과카몰리에 원격으로 접속하여 실행하였다.
 	+ protected/not-protected : 함수인자로 널 포인터를 주었을 경우 처리여부. undefined 이기 때문에 무시해도 된다.
++ **libft-war-machine** : <https://github.com/ska42/libft-war-machine>
+	+ bonus part는 테스트가 안된다고 한다.
 
 -----------------------------------------------
 ### Part 1 - Libc functions
@@ -143,3 +145,14 @@ discover that having functions to manipulate lists is even more useful. You’ll
 + input parameter로 void (*f)(void *) 받아온 경우 이 함수포인터를 사용하는 형태. 아래는 모두 함수포인터를 가르킨다.
 	+ (*f) : 원칙적인 표현
 	+ f : 허용되는 표현
+
+
+-----------------------------------
+
+#### Peer-Evalution
+1. ft_putchar_fd 관련 함수들에서 fd&lt;0 일 때, error 발생하지 않을까?
+	+ 이경우 함수 내의 write()에서 -1을 return 하고, ft_putchar_fd()는 반환형이 void이기 때문에 오류는 발생하지 않으리라 생각함.
+2. ft_substr(), ft_strjoin()
+	+ ft_substr() : 메모리 누수 관련. 만약, s의 길이가 10이고, len이 30이면, calloc에서 20만큼의 메모리 누수가 발생하게 되는 문제! 이것에 대한 예외처리가 필요할 것임.
+	+ ft_strjoin() : s1, s2 둘 중 하나가 null이면 둘 중 null이 아닌 string을 return 해준다? 이것에 대한 예외처리가 필요할 것임.
++ 뮬리넷 평가 결과 1,2에 대한 지적은 없었으나, 2에 대해서는 충분히 보완할 필요가 있다고 생각한다.
