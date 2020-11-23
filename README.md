@@ -149,7 +149,7 @@ discover that having functions to manipulate lists is even more useful. You’ll
 
 -----------------------------------
 
-#### Peer-Evalution
+### Peer-Evalution
 1. ft_putchar_fd 관련 함수들에서 fd&lt;0 일 때, error 발생하지 않을까?
 	+ 이경우 함수 내의 write()에서 -1을 return 하고, ft_putchar_fd()는 반환형이 void이기 때문에 오류는 발생하지 않으리라 생각함.
 2. ft_substr(), ft_strjoin()
