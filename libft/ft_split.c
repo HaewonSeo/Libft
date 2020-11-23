@@ -6,42 +6,11 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 20:24:01 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/23 02:56:19 by haseo            ###   ########.fr       */
+/*   Updated: 2020/11/23 16:42:17 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_cnt_words(char const *s, char c)
-{
-	size_t		count;
-	int			word_start;
-
-	count = 0;
-	word_start = 1;
-	while (*s)
-	{
-		if (*s == c)
-			word_start = 1;
-		else if (word_start == 1)
-		{
-			count++;
-			word_start = 0;
-		}
-		s++;
-	}
-	return (count);
-}
-
-static size_t	ft_wordlen(char const *word, char c)
-{
-	size_t len;
-
-	len = 0;
-	while (word[len] != c && word[len] != '\0')
-		len++;
-	return (len);
-}
 
 static void		ft_free_arr(char **arr)
 {
@@ -54,6 +23,16 @@ static void		ft_free_arr(char **arr)
 		i++;
 	}
 	free(arr);
+}
+
+static size_t	ft_wordlen(char const *word, char c)
+{
+	size_t len;
+
+	len = 0;
+	while (word[len] != c && word[len] != '\0')
+		len++;
+	return (len);
 }
 
 static char		**ft_split_str(char **split_arr, char const *s, char c)
@@ -79,6 +58,27 @@ static char		**ft_split_str(char **split_arr, char const *s, char c)
 			i++;
 	}
 	return (split_arr);
+}
+
+static size_t	ft_cnt_words(char const *s, char c)
+{
+	size_t		count;
+	int			word_start;
+
+	count = 0;
+	word_start = 1;
+	while (*s)
+	{
+		if (*s == c)
+			word_start = 1;
+		else if (word_start == 1)
+		{
+			count++;
+			word_start = 0;
+		}
+		s++;
+	}
+	return (count);
 }
 
 char			**ft_split(char const *s, char c)
