@@ -8,7 +8,7 @@ projects.
 Through this project, we also give you the opportunity to expand the list of functions
 with your own. Take the time to expand your libft throughout the year.
 
-
+-----------------------------
 ### Makefile
 + GNU Make 강좌 <http://doc.kldp.org/KoreanDoc/html/GNU-Make/GNU-Make.html#toc8>
 + @를 붙여주면 verbose(과정을 출력)하지 않는다. <https://stackoverflow.com/questions/8610799/what-does-at-symbol-colon-mean-in-a-makefile>
