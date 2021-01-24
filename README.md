@@ -1,4 +1,4 @@
-## Libft(115/115)
+# Libft(115/115)
 + Make a 42(Forty-Two) library
 + Introduction
 C programming can be very tedious when one doesn’t have access to those highly useful
