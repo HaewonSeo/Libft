@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstmaxwidth.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 19:29:42 by haseo             #+#    #+#             */
-/*   Updated: 2021/05/10 03:10:48 by haseo            ###   ########.fr       */
+/*   Created: 2021/05/10 02:02:43 by haseo             #+#    #+#             */
+/*   Updated: 2021/05/20 13:58:56 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+size_t		ft_lstmaxwidth(t_list *lst)
 {
-	if (!lst || !del)
-		return ;
-	(*del)(lst->content);
-	free(lst);
-	lst = NULL;
+	size_t max;
+	size_t len;
+
+	max = 0;
+	while (lst)
+	{
+		len = ft_strlen((const char *)lst->content);
+		if (len > max)
+			max = len;
+		lst = lst->next;
+	}
+	return (max);
 }

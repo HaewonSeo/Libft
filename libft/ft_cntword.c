@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_cntword.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/22 19:29:42 by haseo             #+#    #+#             */
-/*   Updated: 2021/05/10 03:10:48 by haseo            ###   ########.fr       */
+/*   Created: 2021/05/22 16:57:09 by haseo             #+#    #+#             */
+/*   Updated: 2021/05/22 16:57:42 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+size_t	ft_cntword(char const *s, char c)
 {
-	if (!lst || !del)
-		return ;
-	(*del)(lst->content);
-	free(lst);
-	lst = NULL;
+	size_t		count;
+	int			word_start;
+
+	count = 0;
+	word_start = 1;
+	while (*s)
+	{
+		if (*s == c)
+			word_start = 1;
+		else if (word_start == 1)
+		{
+			count++;
+			word_start = 0;
+		}
+		s++;
+	}
+	return (count);
 }

@@ -1,55 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoabase.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/22 17:04:13 by haseo             #+#    #+#             */
-/*   Updated: 2021/02/22 17:04:14 by haseo            ###   ########.fr       */
+/*   Created: 2021/02/17 17:38:31 by haseo             #+#    #+#             */
+/*   Updated: 2021/02/22 15:00:43 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_intlen(long n)
+static int		ft_nbrlen(long n, int base)
 {
-	size_t len;
+	int		len;
 
 	len = 0;
 	if (n <= 0)
 		len++;
 	while (n)
 	{
-		n /= 10;
+		n /= base;
 		len++;
 	}
 	return (len);
 }
 
-char			*ft_itoa(int n)
+static char		*ft_getbaseset(char type)
 {
-	char	*str;
-	size_t	len;
-	int		pos;
-	long	nbr;
+	if (type == 'd' || type == 'i' || type == 'u')
+		return ("0123456789");
+	else if (type == 'x' || type == 'p')
+		return ("0123456789abcdef");
+	else if (type == 'X')
+		return ("0123456789ABCDEF");
+	else
+		return (NULL);
+}
 
-	nbr = n;
-	pos = 1;
-	len = ft_intlen(nbr);
+char			*ft_itoabase(long nbr, char type)
+{
+	char	*baseset;
+	int		base;
+	char	*str;
+	int		len;
+
+	baseset = ft_getbaseset(type);
+	base = ft_strlen(baseset);
+	len = ft_nbrlen(nbr, base);
 	if (!(str = ft_calloc(len + 1, sizeof(char))))
 		return (NULL);
-	if (nbr < 0)
-	{
-		pos = -1;
-		nbr = -nbr;
-	}
 	while (len)
 	{
-		str[--len] = '0' + (nbr % 10);
-		nbr = nbr / 10;
+		str[--len] = baseset[nbr % base];
+		nbr = nbr / base;
 	}
-	if (pos == -1)
-		str[0] = '-';
 	return (str);
 }
