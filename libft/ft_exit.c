@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: haseo <haseo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/09 16:18:14 by haseo             #+#    #+#             */
-/*   Updated: 2021/05/20 22:57:17 by haseo            ###   ########.fr       */
+/*   Updated: 2021/09/17 18:16:36 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_exit(const char *str)
 {
 	ft_putstr(str);
 	ft_putstr("\n");
-	exit(0);
+	exit(1);
 }
