@@ -3,14 +3,56 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+         #
+#    By: haseo <haseo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/02 16:49:36 by haseo             #+#    #+#              #
-#    Updated: 2021/05/22 17:00:28 by haseo            ###   ########.fr        #
+#    Updated: 2021/09/24 22:14:37 by haseo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
+
+# ----------------------------------
+# Compile flag
+# ----------------------------------
+CC				= gcc
+CFLAGS 			= -Wall -Wextra -Werror
+ARFLAGS			= rcs
+# CFLAGS			+= -g3 -fsanitize=address
+# CFLAGS			+= -g
+
+# ----------------------------------
+# Command
+# ----------------------------------
+
+RM				= rm -rf
+MKDIR			= mkdir -p
+RMDIR			= rmdir
+ECHO			= echo
+AR				= ar
+
+
+# ----------------------------------
+# Echo Color
+# ----------------------------------
+
+NOCOLOR			= \033[0m
+RED				= \033[0;31m
+GREEN			= \033[0;32m
+ORANGE			= \033[0;33m
+BLUE			= \033[0;34m
+PURPLE			= \033[0;35m
+CYAN			= \033[0;36m
+LIGHTGRAY		= \033[0;37m
+DARKGRAY		= \033[1;30m
+LIGHTRED		= \033[1;31m
+LIGHTGREEN		= \033[1;32m
+YELLOW			= \033[1;33m
+LIGHTBLUE		= \033[1;34m
+LIGHTPURPLE		= \033[1;35m
+LIGHTCYAN		= \033[1;36m
+WHITE			= \033[1;37m
+
 
 SRCS =		ft_memset.c \
 			ft_bzero.c \
@@ -66,37 +108,43 @@ B_SRCS =	ft_lstnew.c \
 			ft_lstmap.c \
 			ft_lstmaxwidth.c
 
+# ----------------------------------
+# Directory
+# ----------------------------------
 
-OBJS		= ${SRCS:.c=.o}
+LIBFT_DIR		= .
+INC_DIR			= .
+SRC_DIR			= .
+OBJ_DIR			= ./obj
 
-B_OBJS		= ${B_SRCS:.c=.o}
+OBJS		= $(addprefix $(OBJ_DIR)/, ${SRCS:.c=.o})
+B_OBJS		= $(addprefix $(OBJ_DIR)/, ${B_SRCS:.c=.o})
 
-INC			= ./
+# ----------------------------------
+# Rules
+# ----------------------------------
+$(OBJ_DIR):
+			@$(MKDIR) $@
 
-CC			= gcc
-CFLAGS 		= -Wall -Wextra -Werror
-AR			= ar
-ARFLAGS		= rcs
-RM			= rm -f
-ECHO		= echo
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+			@${CC} -c ${CFLAGS} -o $@ $< -I${INC_DIR}
 
 $(NAME):	${OBJS}
 			@${AR} ${ARFLAGS} $@ $^
 
-%.o: %.c
-			@${CC} -c ${CFLAGS} -o $@ $< -I${INC}
+all:		$(OBJ_DIR) ${NAME} 
 
-all:		${NAME}
+bonus:		all $(B_OBJS)
+			@${AR} ${ARFLAGS} ${NAME} $(B_OBJS)
 
 clean:
 			@${RM} ${OBJS} ${B_OBJS}
+			@$(RM) $(OBJ_DIR)
 
 fclean:		clean
 			@${RM} ${NAME}
 
 re:			fclean all
 
-bonus:		${OBJS} ${B_OBJS}
-			@${AR} ${ARFLAGS} ${NAME} $^
 
 .PHONY: 	all clean fclean re bonus

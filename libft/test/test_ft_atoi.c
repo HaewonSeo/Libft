@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: haseo <haseo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 00:41:34 by haseo             #+#    #+#             */
-/*   Updated: 2020/11/21 00:53:46 by haseo            ###   ########.fr       */
+/*   Updated: 2021/09/24 22:14:49 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 //ft_atoi.c test file
-#include "libft.h"
+#include "../libft.h"
 
 void main(void)
 {
