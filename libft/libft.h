@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
+/*   By: haseo <haseo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 03:17:02 by haseo             #+#    #+#             */
-/*   Updated: 2021/05/22 16:59:43 by haseo            ###   ########.fr       */
+/*   Updated: 2021/10/02 16:48:08 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 */
 
 void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr_fd(const char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr(const char *s);
@@ -137,5 +137,11 @@ void				ft_free2d(char **arr);
 int					ft_isdigit_str(const char *str);
 size_t				ft_lstmaxwidth(t_list *lst);
 size_t				ft_cntword(char const *s, char c);
+
+/*
+** push_swap
+*/
+
+int					ft_strcmp(const char *s1, const char *s2);
 
 #endif
