@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haseo <haseo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 03:17:02 by haseo             #+#    #+#             */
-/*   Updated: 2021/10/02 17:38:50 by haseo            ###   ########.fr       */
+/*   Updated: 2021/10/10 01:00:41 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,6 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdio.h>
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 100
-# endif
-
-# ifndef OPEN_MAX
-#  define OPEN_MAX 10240
-# endif
 
 typedef struct s_list
 {
