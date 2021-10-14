@@ -6,7 +6,7 @@
 #    By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/02 16:49:36 by haseo             #+#    #+#              #
-#    Updated: 2021/10/10 01:04:52 by haseo            ###   ########.fr        #
+#    Updated: 2021/10/14 23:15:20 by haseo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -145,7 +145,7 @@ FT_PRINTF_OBJS	= $(addprefix $(OBJ_DIR)/, ${FT_PRINTF_SRCS:.c=.o})
 
 all:		$(NAME)
 
-$(NAME):	$(OBJ_DIR) libft gnl ft_printf
+$(NAME):	$(OBJ_DIR) ${LIBFT_OBJS} ${GNL_OBJS} ${FT_PRINTF_OBJS}
 			@${AR} ${ARFLAGS} $@ ${LIBFT_OBJS} ${GNL_OBJS} ${FT_PRINTF_OBJS}
 			@$(ECHO) "$(GREEN)[Success]\t $(BLUE)Create $@ \t$(NOCOLOR)"
 
@@ -157,16 +157,6 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)/%.o: %.c
 			@${CC} -c ${CFLAGS} -I${INC_DIR} -o $@ $^
-
-libft:		${LIBFT_OBJS}
-			@$(ECHO) "$(GREEN)[Success]\t $(BLUE)Create $@ \t$(NOCOLOR)"
-
-gnl:		${GNL_OBJS}
-			@$(ECHO) "$(GREEN)[Success]\t $(BLUE)Create $@ \t$(NOCOLOR)"
-
-ft_printf:	${FT_PRINTF_OBJS}
-			@$(ECHO) "$(GREEN)[Success]\t $(BLUE)Create $@ \t$(NOCOLOR)"
-
 
 clean:
 			@${RM} ${LIBFT_OBJS} ${GNL_OBJS} ${FT_PRINTF_OBJS}
@@ -180,4 +170,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY: 	all clean fclean re libft gnl ft_printf
+# .PHONY: 	all clean fclean re libft gnl ft_printf
