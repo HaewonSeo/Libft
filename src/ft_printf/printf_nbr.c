@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:30:12 by haseo             #+#    #+#             */
-/*   Updated: 2021/02/22 17:01:26 by haseo            ###   ########.fr       */
+/*   Updated: 2021/10/14 17:29:13 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,10 @@ static void	printf_nbr_by_len(t_spec *spec, char *itoa, \
 	int		itoa_len;
 
 	itoa_len = (int)ft_strlen(itoa);
-	blank_pad = (spec->zero_pad) ? '0' : ' ';
+	if (spec->zero_pad)
+		blank_pad = '0';
+	else
+		blank_pad = ' ';
 	if (spec->hyphen)
 	{
 		printf_nbr_part(spec, itoa, zero_pad_len, itoa_len);
@@ -89,7 +92,7 @@ static void	printf_nbr_by_len(t_spec *spec, char *itoa, \
 	}
 }
 
-void		printf_nbr(t_spec *spec, long long nbr)
+void	printf_nbr(t_spec *spec, long long nbr)
 {
 	char	*itoa;
 	int		itoa_len;
@@ -103,7 +106,8 @@ void		printf_nbr(t_spec *spec, long long nbr)
 	}
 	if (spec->dot && spec->prec == 0 && nbr == 0)
 	{
-		if (!(itoa = ft_calloc(1, sizeof(char))))
+		itoa = ft_calloc(1, sizeof(char));
+		if (!itoa)
 			return ;
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 18:29:40 by haseo             #+#    #+#             */
-/*   Updated: 2021/02/22 16:16:05 by haseo            ###   ########.fr       */
+/*   Updated: 2021/10/14 17:27:45 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void	printf_ch(t_spec *spec, const char ch)
 {
 	char	pad;
 
-	pad = (spec->type == '%' && spec->zero_pad) ? '0' : ' ';
+	if (spec->type == '%' && spec->zero_pad)
+		pad = '0';
+	else
+		pad = ' ';
 	if (spec->width > 0)
 		spec->cnt_ch += spec->width;
 	else

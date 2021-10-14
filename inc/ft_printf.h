@@ -6,7 +6,7 @@
 /*   By: haseo <haseo@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 23:16:08 by haseo             #+#    #+#             */
-/*   Updated: 2021/10/10 01:03:36 by haseo            ###   ########.fr       */
+/*   Updated: 2021/10/14 17:26:22 by haseo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 # define TYPE "cspdiuxX%\0"
 
-typedef struct		s_spec
+typedef struct s_spec
 {
 	int		zero_pad;
 	int		hyphen;
